@@ -85,16 +85,18 @@
   document(
     title + ".html",
     title: title,
+    {
+      set page(
+        fill: bg_pattern,
+        height: auto,
+        // width defautls to a4, which is fine
+        // margin: 10pt,
+      )
+      header()
+      content_block(content)
+      footer()
+    }
   )
-  set page(
-    fill: bg_pattern,
-    height: auto,
-    // width defautls to a4, which is fine
-    // margin: 10pt,
-  )
-  header()
-  content_block(content)
-  footer()
 }
 
 #make_pg("index", lorem(420))

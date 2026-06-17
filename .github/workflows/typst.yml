@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Typst
         uses: typst-community/setup-typst@v5
-      - run: typst compile --features html,bundle --output bundle site.typ
+      - run: typst compile --features html,bundle --format bundle site.typ
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

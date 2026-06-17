@@ -48,3 +48,17 @@ ol {
   margin: 0;
 }
 
+a {
+  color: var(--bright-color);
+  text-decoration: none;
+}
+
+a:focus {
+  color: oklab(from var(--bright-color) 40% a b);
+  text-decoration: none;
+}
+
+a:hover {
+  color: oklab(from var(--bright-color) 40% a b);
+  text-decoration: none;
+}

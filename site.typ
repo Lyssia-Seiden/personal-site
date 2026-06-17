@@ -1,9 +1,10 @@
-#let content_block(content) = html.elem("div", attrs: (class: "content-block"), content)
+#import "lib.typ" : content_block
 
 #let header() = {
   // todo find a way to slide the height around
     content_block(html.span(class: "header")[
-      = lyssia's blog <\3
+
+      #heading(outlined: false)[lyssia's blog <\3]
       #let pages = (
         (display: [home], link: <home>),
         (display: [blog], link: <blog>),
@@ -44,13 +45,6 @@ i read sometimes (favorites include _The Left Hand of Darkness_, _Angels in Amer
 
 past things i've done include:
 - lead the software team on #link("https://www.frc8033.com/")[frc team 8033]
-/*
-  - brought the software team up from no returning knowledge to top tenish in california
-  - built a #link("https://github.com/HighlanderRobotics/Highlanders-Training")[training curriculum]
-  - worked on open source #link("https://github.com/SleipnirGroup/Choreo")[trajectory optimization]
-  - made a pretty popular discord server (lyssia's prog server, a thousandish people!!) to talk about programming
-  - met a lot of cool people and had a lot of fun!
-*/
 - interned at #link("https://www.atomicmachines.com/")[atomic machines]
 /*
   - did some refactoring on a dsl for rpc messaging
@@ -69,5 +63,5 @@ check out my #link(<blog>)[blog] (if i ever post anything...)
 or my #link(<portfolio>)[portfolio] o.o
 ])<home>
 #make_pg("blog", lorem(200))<blog>
-#make_pg("portfolio", lorem(200))<portfolio>
+#make_pg("portfolio", include "portfolio.typ")<portfolio>
 

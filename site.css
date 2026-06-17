@@ -41,3 +41,10 @@ html {
 .footer {
     text-align: end;
 }
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
